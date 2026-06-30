@@ -1,0 +1,28 @@
+Exercise 1: Implementing the Singleton Pattern
+Scenario: 
+You need to ensure that a logging utility class in your application has only one instance throughout the application lifecycle to ensure consistent logging.
+Steps:
+1.	Create a New Java Project:
+o	Create a new Java project named SingletonPatternExample.
+2.	Define a Singleton Class:
+o	Create a class named Logger that has a private static instance of itself.
+o	Ensure the constructor of Logger is private.
+o	Provide a public static method to get the instance of the Logger class.
+3.	Implement the Singleton Pattern:
+o	Write code to ensure that the Logger class follows the Singleton design pattern.
+4.	Test the Singleton Implementation:
+o	Create a test class to verify that only one instance of Logger is created and used across the application.
+
+
+--Self Explaination and Learning---
+The Singleton Design Pattern ensures that only one instance (object) of a class is created throughout the 
+application's lifecycle and provides a single global access point to it. It is commonly used for shared 
+resources like loggers, database connections, configuration managers, and cache managers, where creating
+ multiple objects could lead to inconsistency or unnecessary resource usage.
+
+In this exercise, the Logger class follows the Singleton pattern by 
+declaring a private static instance variable to store the only object, a private constructor to 
+prevent object creation using new, and a public static getInstance() method that creates the object
+ only once and returns the same instance whenever it is requested. The test class calls getInstance() twice and verifies that both references point to the same object, proving that only one Logger instance exists.
+
+Key Idea: One Class → One Object → Global Access.
